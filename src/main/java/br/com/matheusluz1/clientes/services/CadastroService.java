@@ -12,17 +12,9 @@ public class CadastroService {
     private CadastroRepository repository;
 
 
-    public Cadastro salvarCadastro(Cadastro cadastro){
+    public Cadastro salvarCadastro(Cadastro cadastro) {
         return repository.save(cadastro);
     }
-
-//    public void deletarCadastro(Long idCadastro){
-//
-//         repository.delete(cadastro);
-//    }
-//
-//    public Cadastro buscarCadastro(Long idCadastro){
-//        return repository.findById(idCadastro).get();
-//    }
-
 }
+
+

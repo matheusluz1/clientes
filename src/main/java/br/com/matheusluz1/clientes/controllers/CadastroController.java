@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/cadastros")
 public class CadastroController {
@@ -18,11 +20,14 @@ public class CadastroController {
 
 
     @PostMapping
-    public ResponseEntity<Cadastro> salvarCadastro(@RequestBody Cadastro cadastro){
+    public ResponseEntity<Cadastro> salvarCadastro(@RequestBody @Valid Cadastro cadastro){
         Cadastro retorno = service.salvarCadastro(cadastro);
         return ResponseEntity.ok(retorno);
+
+
+        }
     }
 
 
 
-}
+
