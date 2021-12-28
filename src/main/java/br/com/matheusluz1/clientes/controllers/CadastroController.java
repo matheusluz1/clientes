@@ -11,12 +11,11 @@ import javax.validation.Valid;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/cadastros")
+@RequestMapping("/cliente/api")
 public class CadastroController {
 
     @Autowired
     private CadastroService service;
-
 
     @PostMapping
     public ResponseEntity<Cadastro> salvarCadastro(@RequestBody @Valid Cadastro cadastro){

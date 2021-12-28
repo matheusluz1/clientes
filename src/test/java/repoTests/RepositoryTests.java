@@ -1,4 +1,4 @@
-package br.com.matheusluz1.clientes;
+package java.repoTests;
 
 import br.com.matheusluz1.clientes.controllers.CadastroController;
 import br.com.matheusluz1.clientes.entities.Cadastro;
@@ -14,12 +14,9 @@ import org.springframework.test.context.ContextConfiguration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
-@ContextConfiguration
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @Rollback(value = false )
-@WebMvcTest(CadastroController.class)
 public class RepositoryTests {
 
     @Autowired
@@ -45,12 +42,5 @@ public class RepositoryTests {
         Cadastro cadastro = repository.findById(1L).get();
         cadastro.setNome("Matheus Luz");
         repository.save(cadastro);
-    }
-
-
-    @Test
-    public  void Test_ListarTodos() {
-        Iterable<Cadastro> listaCadastro = repository.findAll();
-        listaCadastro.forEach(System.out::println);
     }
 }
