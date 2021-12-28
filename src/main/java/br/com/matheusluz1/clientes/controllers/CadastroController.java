@@ -11,7 +11,7 @@ import javax.validation.Valid;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/cliente/api")
+@RequestMapping("/api")
 public class CadastroController {
 
     @Autowired

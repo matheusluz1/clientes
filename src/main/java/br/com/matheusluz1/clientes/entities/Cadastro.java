@@ -41,7 +41,7 @@ public class Cadastro {
     @Column(name = "cpf")
     private String cpf;
 
-    @NotEmpty
+    @NotNull(message = "Data de nascimento deve ser informado.")
     @Column(name = "data_nascimento")
     private LocalDate dataNascimento;
 
