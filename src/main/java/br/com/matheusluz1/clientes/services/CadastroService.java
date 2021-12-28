@@ -33,6 +33,8 @@ public class CadastroService {
         cadastroBase.setNome(cadastroAEditar.getNome());
         cadastroBase.setEmail(cadastroAEditar.getEmail());
         cadastroBase.setDataNascimento(cadastroAEditar.getDataNascimento());
+        cadastroBase.setNacionalidade(cadastroAEditar.getNacionalidade());
+        cadastroBase.setNaturalidade(cadastroAEditar.getNaturalidade());
         cadastroBase.setCpf(cadastroAEditar.getCpf());
         cadastroBase.setDataEdicao(LocalDate.now());
         return repository.save(cadastroBase);
