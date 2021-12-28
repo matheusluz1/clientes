@@ -1,4 +1,5 @@
 package br.com.matheusluz1.clientes.entities;
+import br.com.matheusluz1.clientes.enums.Sexo;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
@@ -25,7 +26,7 @@ public class Cadastro {
     private String nome;
 
     @Column(name = "sexo")
-    private String sexo;
+    private Sexo sexo;
 
     @NotNull
     @Email(message = "email invalido!")
